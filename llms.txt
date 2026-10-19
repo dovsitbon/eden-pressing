@@ -1,0 +1,14 @@
+# Eden Pressing
+
+> Pressing à Sarcelles (95200), 79 avenue Paul Valéry. Slogan : « La qualité d'autrefois avec les performances d'aujourd'hui ». Note Google : 4,6/5 (32 avis). Ouvert en continu jusqu'à 19h00.
+
+## Services
+- Nettoyage à sec et détachage (costumes, robes de mariée)
+- Blanchisserie et repassage (chemises au pli ou sur cintre)
+- Grandes pièces : couettes, rideaux, tapis
+- Cuir et daim
+- Retouches et couture (ourlets, fermetures éclair)
+
+## Devis et collecte
+- Demande via le formulaire du site, qui prépare un message WhatsApp : dépôt en boutique ou demande de collecte.
+- Site : https://eden-pressing.vercel.app/

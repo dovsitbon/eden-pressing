@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Eden Pressing Sarcelles · Nettoyage à sec &amp; retouches</title>
+  <meta name="description" content="Pressing à Sarcelles, 79 av. Paul Valéry : nettoyage à sec, repassage, retouches, cuir, couettes et tapis. Noté 4,6/5. Devis et collecte via WhatsApp." />
+  <link rel="canonical" href="https://eden-pressing.vercel.app/" />
+  <meta name="theme-color" content="#16171b" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Eden Pressing" />
+  <meta property="og:title" content="Eden Pressing Sarcelles | La qualité d'autrefois, les performances d'aujourd'hui" />
+  <meta property="og:description" content="Nettoyage à sec, retouches et soin du linge à Sarcelles. Demandez un devis ou une collecte en 30 secondes via WhatsApp." />
+  <meta property="og:url" content="https://eden-pressing.vercel.app/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&h=630&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316171b'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%23ff4fa8'%3EE%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1600&q=70" />
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { 950: '#0f1013', 900: '#16171b', 800: '#1e2025', 700: '#2a2d33', 600: '#3a3d45' },
+            fuchsia: { DEFAULT: '#d6156f', hover: '#ec1f80', soft: '#ff4fa8' },
+          },
+          fontFamily: {
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root { color-scheme: dark; }
+    html { scroll-padding-top: 6rem; -webkit-tap-highlight-color: rgba(214,21,111,.25); }
+    a, button, label, summary, select { touch-action: manipulation; }
+    h1, h2, h3 { text-wrap: balance; }
+    body { background: #16171b; }
+    .glass {
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.09);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+    }
+    .glow { box-shadow: 0 0 0 1px rgba(214,21,111,.35), 0 18px 50px -18px rgba(214,21,111,.55); }
+
+    /* Animations d'apparition */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+    .reveal.fade { transform: none; }
+    .reveal.is-in { opacity: 1; transform: none; }
+
+    /* Icônes de service animées au survol */
+    .svc-icon svg { transition: transform .5s cubic-bezier(.2,.8,.2,1.4); }
+    .svc:hover .svc-icon svg, .svc:focus-within .svc-icon svg { transform: rotate(-8deg) scale(1.12); }
+    .svc-icon::after { content: ''; position: absolute; inset: -1px; border-radius: inherit; background: radial-gradient(circle at 50% 50%, rgba(255,79,168,.45), transparent 70%); opacity: 0; transition: opacity .4s; }
+    .svc:hover .svc-icon::after { opacity: 1; }
+
+    .hero-zoom { animation: heroZoom 22s ease-out both; }
+    @keyframes heroZoom { from { transform: scale(1.12); } to { transform: scale(1); } }
+
+    .no-scrollbar { scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+
+    :focus-visible { outline: 2px solid #ff4fa8; outline-offset: 3px; border-radius: 8px; }
+
+    select option { background: #1e2025; color: #fff; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .hero-zoom { animation: none; }
+      .svc-icon svg { transition: none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DryCleaningOrLaundry",
+    "name": "Eden Pressing",
+    "slogan": "La qualité d'autrefois avec les performances d'aujourd'hui",
+    "url": "https://eden-pressing.vercel.app/",
+    "image": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "79 Avenue Paul Valéry",
+      "postalCode": "95200",
+      "addressLocality": "Sarcelles",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": "Sarcelles",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "bestRating": "5", "reviewCount": "32" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services de pressing",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage à sec et détachage" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Blanchisserie et repassage" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retouches et couture" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien cuir et daim" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nettoyage de couettes, rideaux et tapis" } }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Où se trouve Eden Pressing à Sarcelles ?", "acceptedAnswer": { "@type": "Answer", "text": "Eden Pressing est situé au 79 avenue Paul Valéry, 95200 Sarcelles. La boutique est ouverte en continu jusqu'à 19h00." } },
+      { "@type": "Question", "name": "Quels services propose Eden Pressing ?", "acceptedAnswer": { "@type": "Answer", "text": "Nettoyage à sec et détachage (costumes, robes de mariée), blanchisserie et repassage de chemises, retouches et couture, entretien du cuir et du daim, nettoyage des couettes, rideaux et tapis." } },
+      { "@type": "Question", "name": "Comment demander un devis ou une collecte ?", "acceptedAnswer": { "@type": "Answer", "text": "Remplissez le formulaire de la page : il prépare un message WhatsApp avec votre demande. Vous choisissez de déposer vos articles en boutique ou de demander une collecte." } },
+      { "@type": "Question", "name": "Eden Pressing nettoie-t-il les couettes et les tapis ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Les grandes pièces comme les couettes, les rideaux et les tapis font partie des services d'Eden Pressing à Sarcelles." } }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-ink-900 font-sans text-zinc-200 antialiased selection:bg-fuchsia selection:text-white">
+  <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-fuchsia focus:px-4 focus:py-2 focus:text-white">Aller au contenu</a>
+
+  <!-- ============ HEADER ============ -->
+  <header id="top" class="fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-300" data-header>
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#accueil" class="group flex items-center gap-3" aria-label="Eden Pressing, retour à l'accueil">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-fuchsia font-serif text-2xl font-semibold italic text-white shadow-lg shadow-fuchsia/30 transition-transform group-hover:rotate-[-6deg]">E</span>
+        <span class="leading-none">
+          <span class="block text-[15px] font-extrabold tracking-[0.22em] text-white" translate="no">EDEN</span>
+          <span class="block text-[10px] font-semibold tracking-[0.42em] text-fuchsia-soft" translate="no">PRESSING</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navigation principale" class="hidden lg:block">
+        <ul class="glass flex items-center gap-1 rounded-full p-1.5 text-sm font-semibold">
+          <li><a href="#services" data-nav class="rounded-full px-4 py-2 text-zinc-300 transition hover:text-white">Services</a></li>
+          <li><a href="#demande" data-nav class="rounded-full px-4 py-2 text-zinc-300 transition hover:text-white">Devis &amp; collecte</a></li>
+          <li><a href="#avis" data-nav class="rounded-full px-4 py-2 text-zinc-300 transition hover:text-white">Avis</a></li>
+          <li><a href="#contact" data-nav class="rounded-full px-4 py-2 text-zinc-300 transition hover:text-white">Accès</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#demande" class="hidden rounded-full bg-fuchsia px-5 py-2.5 text-sm font-bold text-white transition hover:bg-fuchsia-hover sm:inline-flex glow">Demander un devis</a>
+        <button type="button" class="glass grid h-11 w-11 place-items-center rounded-full text-white lg:hidden" aria-expanded="false" aria-controls="menu-mobile" aria-label="Ouvrir le menu" data-menu-btn>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" data-icon-open/><path d="M6 6l12 12M18 6L6 18" class="hidden" data-icon-close/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="menu-mobile" class="hidden px-4 pb-4 lg:hidden" data-menu>
+      <nav aria-label="Navigation mobile" class="glass rounded-2xl p-2">
+        <a href="#services" class="block rounded-xl px-4 py-3.5 font-semibold text-white hover:bg-white/5">Services</a>
+        <a href="#demande" class="block rounded-xl px-4 py-3.5 font-semibold text-white hover:bg-white/5">Devis &amp; collecte</a>
+        <a href="#avis" class="block rounded-xl px-4 py-3.5 font-semibold text-white hover:bg-white/5">Avis clients</a>
+        <a href="#contact" class="block rounded-xl px-4 py-3.5 font-semibold text-white hover:bg-white/5">Accès &amp; horaires</a>
+        <a href="#demande" class="mt-2 block rounded-xl bg-fuchsia px-4 py-3.5 text-center font-bold text-white">Demander un devis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <!-- ============ HERO ============ -->
+    <section id="accueil" class="relative isolate flex min-h-[100svh] items-end overflow-hidden pb-16 pt-32 sm:items-center sm:pb-24">
+      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1600&q=70"
+             srcset="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=1600&q=70 1600w, https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=2400&q=70 2400w"
+             sizes="100vw" width="1600" height="1067" alt="" class="hero-zoom h-full w-full object-cover" fetchpriority="high" />
+        <div class="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-900/75 to-ink-900"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/40 to-transparent"></div>
+        <div class="absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-fuchsia/25 blur-[120px]"></div>
+      </div>
+
+      <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <a href="#avis" class="reveal glass mb-7 inline-flex items-center gap-2.5 rounded-full py-1.5 pl-1.5 pr-4 text-sm text-zinc-200 transition hover:border-white/20">
+            <span class="flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-xs font-bold text-ink-900">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#d6156f" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+              4,6
+            </span>
+            <span><strong class="font-semibold text-white">32 avis Google</strong> · Sarcelles</span>
+          </a>
+
+          <h1 class="reveal text-[2.6rem] font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl" style="--d:80ms">
+            La qualité <span class="font-serif font-semibold italic text-fuchsia-soft">d'autrefois</span><br class="hidden sm:block" />
+            avec les performances d'aujourd'hui.
+          </h1>
+
+          <p class="reveal mt-6 max-w-xl text-lg leading-relaxed text-zinc-300 sm:text-xl" style="--d:160ms">
+            Votre pressing de confiance à Sarcelles. Nettoyage à sec, retouches et soin du linge.
+          </p>
+
+          <div class="reveal mt-9 flex flex-col gap-3 sm:flex-row" style="--d:240ms">
+            <a href="#demande" class="glow inline-flex items-center justify-center gap-2 rounded-full bg-fuchsia px-7 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:bg-fuchsia-hover">
+              Demander un devis ou une collecte
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#services" class="glass inline-flex items-center justify-center rounded-full px-7 py-4 text-base font-semibold text-white transition hover:bg-white/10">Découvrir nos services</a>
+          </div>
+
+          <dl class="reveal mt-12 grid max-w-xl grid-cols-3 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 text-center" style="--d:320ms">
+            <div class="bg-ink-900/80 px-3 py-4 backdrop-blur"><dt class="text-xs text-zinc-400">Ouvert jusqu'à</dt><dd class="mt-1 text-lg font-bold text-white">19h00</dd></div>
+            <div class="bg-ink-900/80 px-3 py-4 backdrop-blur"><dt class="text-xs text-zinc-400">Note Google</dt><dd class="mt-1 text-lg font-bold text-white">4,6 / 5</dd></div>
+            <div class="bg-ink-900/80 px-3 py-4 backdrop-blur"><dt class="text-xs text-zinc-400">Collecte</dt><dd class="mt-1 text-lg font-bold text-white">Sur demande</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="relative scroll-mt-24 py-24 sm:py-32" aria-labelledby="services-titre">
+      <div class="pointer-events-none absolute left-0 top-40 h-80 w-80 rounded-full bg-fuchsia/10 blur-[110px]" aria-hidden="true"></div>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div class="max-w-2xl">
+            <p class="reveal text-sm font-bold uppercase tracking-[0.25em] text-fuchsia-soft">Nos services experts</p>
+            <h2 id="services-titre" class="reveal mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl" style="--d:80ms">Chaque fibre traitée <span class="font-serif italic font-semibold">avec méthode.</span></h2>
+          </div>
+          <p class="reveal max-w-md text-zinc-400" style="--d:160ms">Du costume du quotidien à la robe de mariée, en passant par la couette de l'hiver : Eden Pressing nettoie, repasse et retouche, au 79 avenue Paul Valéry.</p>
+        </div>
+
+        <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Carte 1 -->
+          <article class="svc reveal glass group relative flex flex-col rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 hover:border-fuchsia/40" style="--d:0ms">
+            <div class="svc-icon relative grid h-14 w-14 place-items-center rounded-2xl bg-fuchsia/15 text-fuchsia-soft">
+              <svg class="relative z-10" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a2 2 0 1 1 2 2c-1 0-2 .8-2 2"/><path d="M12 8 2.6 15.2A1.5 1.5 0 0 0 3.5 18h17a1.5 1.5 0 0 0 .9-2.8z"/><path d="M18 2.5l.6 1.4 1.4.6-1.4.6L18 6.5l-.6-1.4-1.4-.6 1.4-.6z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">Nettoyage &amp; Détachage</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-400">Nettoyage à sec des costumes, manteaux et pièces délicates. Soin particulier des robes de mariée et des taches tenaces.</p>
+            <ul class="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-zinc-300">
+              <li class="rounded-full border border-white/10 px-3 py-1">Costumes</li>
+              <li class="rounded-full border border-white/10 px-3 py-1">Robes de mariée</li>
+            </ul>
+          </article>
+          <!-- Carte 2 -->
+          <article class="svc reveal glass group relative flex flex-col rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 hover:border-fuchsia/40" style="--d:90ms">
+            <div class="svc-icon relative grid h-14 w-14 place-items-center rounded-2xl bg-fuchsia/15 text-fuchsia-soft">
+              <svg class="relative z-10" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 5.5 5.5 10 7 9.3V21h10V9.3l1.5.7L20 5.5 16 3"/><path d="M8 3c.5 1.8 2 3 4 3s3.5-1.2 4-3"/><path d="m12 6-1.5 3L12 21l1.5-12z"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">Blanchisserie &amp; Repassage</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-400">Linge lavé, séché et repassé avec précision. Chemises rendues pliées ou sur cintre, selon votre préférence.</p>
+            <ul class="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-zinc-300">
+              <li class="rounded-full border border-white/10 px-3 py-1">Chemises au pli</li>
+              <li class="rounded-full border border-white/10 px-3 py-1">Sur cintre</li>
+            </ul>
+          </article>
+          <!-- Carte 3 -->
+          <article class="svc reveal glass group relative flex flex-col rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 hover:border-fuchsia/40" style="--d:180ms">
+            <div class="svc-icon relative grid h-14 w-14 place-items-center rounded-2xl bg-fuchsia/15 text-fuchsia-soft">
+              <svg class="relative z-10" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10c3 1.5 6 1.5 9 0s6-1.5 9 0"/><path d="M7 15h.01M12 15h.01M17 15h.01"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">Grandes pièces</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-400">Couettes, rideaux et tapis nettoyés en profondeur pour retrouver volume, fraîcheur et couleurs. Le cuir et le daim aussi.</p>
+            <ul class="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-zinc-300">
+              <li class="rounded-full border border-white/10 px-3 py-1">Couettes</li>
+              <li class="rounded-full border border-white/10 px-3 py-1">Tapis</li>
+              <li class="rounded-full border border-white/10 px-3 py-1">Cuir &amp; daim</li>
+            </ul>
+          </article>
+          <!-- Carte 4 -->
+          <article class="svc reveal glass group relative flex flex-col rounded-3xl p-7 transition duration-300 hover:-translate-y-1.5 hover:border-fuchsia/40" style="--d:270ms">
+            <div class="svc-icon relative grid h-14 w-14 place-items-center rounded-2xl bg-fuchsia/15 text-fuchsia-soft">
+              <svg class="relative z-10" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg>
+            </div>
+            <h3 class="mt-6 text-xl font-bold text-white">Retouches &amp; Couture</h3>
+            <p class="mt-3 flex-1 text-[15px] leading-relaxed text-zinc-400">Ourlets, ajustements, fermetures éclair remplacées : vos vêtements retrouvent un tombé impeccable.</p>
+            <ul class="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-zinc-300">
+              <li class="rounded-full border border-white/10 px-3 py-1">Ourlets</li>
+              <li class="rounded-full border border-white/10 px-3 py-1">Fermetures éclair</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Comment ça marche -->
+        <ol class="mt-16 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3">
+          <li class="reveal bg-ink-900 p-7">
+            <span class="font-serif text-4xl italic text-fuchsia-soft">01</span>
+            <h3 class="mt-3 font-bold text-white">Vous décrivez votre besoin</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Article, détail de la demande, dépôt ou collecte : 30 secondes dans le formulaire.</p>
+          </li>
+          <li class="reveal bg-ink-900 p-7" style="--d:90ms">
+            <span class="font-serif text-4xl italic text-fuchsia-soft">02</span>
+            <h3 class="mt-3 font-bold text-white">On vous répond sur WhatsApp</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Devis, conseils et créneau de collecte, directement dans la conversation.</p>
+          </li>
+          <li class="reveal bg-ink-900 p-7" style="--d:180ms">
+            <span class="font-serif text-4xl italic text-fuchsia-soft">03</span>
+            <h3 class="mt-3 font-bold text-white">Vous récupérez un linge impeccable</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">En boutique avenue Paul Valéry, ouverte en continu jusqu'à 19h00.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ MODULE DEMANDE / COLLECTE ============ -->
+    <section id="demande" class="relative scroll-mt-24 py-24 sm:py-32" aria-labelledby="demande-titre">
+      <div class="pointer-events-none absolute inset-x-0 top-1/3 mx-auto h-96 max-w-4xl rounded-full bg-fuchsia/15 blur-[140px]" aria-hidden="true"></div>
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:gap-16 lg:px-8">
+        <div class="lg:pt-6">
+          <p class="reveal text-sm font-bold uppercase tracking-[0.25em] text-fuchsia-soft">Devis &amp; collecte</p>
+          <h2 id="demande-titre" class="reveal mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl" style="--d:80ms">Votre demande, <span class="font-serif italic font-semibold">en un message.</span></h2>
+          <p class="reveal mt-6 max-w-md text-lg leading-relaxed text-zinc-400" style="--d:160ms">Remplissez ces quelques champs : nous préparons un message WhatsApp avec toutes les informations. Il ne vous reste qu'à l'envoyer.</p>
+
+          <ul class="reveal mt-10 space-y-4" style="--d:240ms">
+            <li class="flex gap-4">
+              <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/5 text-fuchsia-soft"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span><strong class="block text-white">Réponse rapide</strong><span class="text-sm text-zinc-400">Pendant les heures d'ouverture, jusqu'à 19h00.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/5 text-fuchsia-soft"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+              <span><strong class="block text-white">Collecte sur demande</strong><span class="text-sm text-zinc-400">Indiquez votre adresse, nous convenons d'un créneau.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/5 text-fuchsia-soft"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <span><strong class="block text-white">Sans engagement</strong><span class="text-sm text-zinc-400">Le devis est gratuit, vous décidez ensuite.</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <form id="form-demande" class="reveal glass relative rounded-[2rem] p-6 sm:p-9" novalidate style="--d:120ms" aria-describedby="form-aide">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="sm:col-span-1">
+              <label for="nom" class="mb-2 block text-sm font-semibold text-white">Nom <span class="text-fuchsia-soft" aria-hidden="true">*</span></label>
+              <input id="nom" name="nom" type="text" autocomplete="name" required maxlength="80" placeholder="Ex. Sarah Benali…"
+                     class="w-full rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3.5 text-white placeholder-zinc-500 transition focus:border-fuchsia-soft focus:outline-none focus:ring-2 focus:ring-fuchsia/40 aria-[invalid=true]:border-red-400" aria-describedby="nom-err" />
+              <p id="nom-err" class="mt-1.5 hidden text-sm text-red-300" role="alert"></p>
+            </div>
+            <div class="sm:col-span-1">
+              <label for="article" class="mb-2 block text-sm font-semibold text-white">Type d'article <span class="text-fuchsia-soft" aria-hidden="true">*</span></label>
+              <div class="relative">
+                <select id="article" name="article" required
+                        class="w-full appearance-none rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3.5 pr-10 text-white transition focus:border-fuchsia-soft focus:outline-none focus:ring-2 focus:ring-fuchsia/40 aria-[invalid=true]:border-red-400" aria-describedby="article-err">
+                  <option value="" selected disabled>Choisir…</option>
+                  <option>Costume</option>
+                  <option>Robe</option>
+                  <option>Couette</option>
+                  <option>Tapis</option>
+                  <option>Retouche</option>
+                </select>
+                <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+              <p id="article-err" class="mt-1.5 hidden text-sm text-red-300" role="alert"></p>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label for="details" class="mb-2 block text-sm font-semibold text-white">Demande spécifique</label>
+              <textarea id="details" name="details" rows="4" maxlength="600" placeholder="Ex. tache de vin sur une robe en soie, ourlet de pantalon de 3 cm…"
+                        class="w-full resize-none rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3.5 text-white placeholder-zinc-500 transition focus:border-fuchsia-soft focus:outline-none focus:ring-2 focus:ring-fuchsia/40"></textarea>
+              <p class="mt-1.5 text-right text-xs text-zinc-500" aria-live="polite"><span data-count>0</span>/600</p>
+            </div>
+
+            <fieldset class="sm:col-span-2">
+              <legend class="mb-3 text-sm font-semibold text-white">Comment souhaitez-vous procéder ? <span class="text-fuchsia-soft" aria-hidden="true">*</span></legend>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <label class="group relative flex cursor-pointer items-start gap-3 rounded-2xl border border-white/10 bg-ink-950/40 p-4 transition hover:border-white/25 has-[:checked]:border-fuchsia-soft has-[:checked]:bg-fuchsia/10">
+                  <input type="radio" name="mode" value="Dépôt en boutique" class="peer sr-only" checked />
+                  <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border-2 border-zinc-500 transition peer-checked:border-fuchsia-soft peer-focus-visible:ring-2 peer-focus-visible:ring-fuchsia-soft peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-ink-900"><span class="h-2 w-2 scale-0 rounded-full bg-fuchsia-soft transition group-has-[:checked]:scale-100"></span></span>
+                  <span><strong class="block text-white">Déposer en boutique</strong><span class="text-sm text-zinc-400">79 av. Paul Valéry</span></span>
+                </label>
+                <label class="group relative flex cursor-pointer items-start gap-3 rounded-2xl border border-white/10 bg-ink-950/40 p-4 transition hover:border-white/25 has-[:checked]:border-fuchsia-soft has-[:checked]:bg-fuchsia/10">
+                  <input type="radio" name="mode" value="Demande de collecte" class="peer sr-only" />
+                  <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full border-2 border-zinc-500 transition peer-checked:border-fuchsia-soft peer-focus-visible:ring-2 peer-focus-visible:ring-fuchsia-soft peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-ink-900"><span class="h-2 w-2 scale-0 rounded-full bg-fuchsia-soft transition group-has-[:checked]:scale-100"></span></span>
+                  <span><strong class="block text-white">Demande de collecte</strong><span class="text-sm text-zinc-400">On vient chercher vos articles</span></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Affiché uniquement pour une collecte -->
+            <div class="grid overflow-hidden transition-[grid-template-rows,opacity] duration-500 sm:col-span-2 [grid-template-rows:0fr] opacity-0" data-collecte aria-hidden="true">
+              <div class="min-h-0">
+                <label for="adresse" class="mb-2 block text-sm font-semibold text-white">Adresse de collecte <span class="text-fuchsia-soft" aria-hidden="true">*</span></label>
+                <input id="adresse" name="adresse" type="text" autocomplete="street-address" maxlength="160" placeholder="Ex. 12 rue de la Gare, Sarcelles…" tabindex="-1"
+                       class="w-full rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3.5 text-white placeholder-zinc-500 transition focus:border-fuchsia-soft focus:outline-none focus:ring-2 focus:ring-fuchsia/40 aria-[invalid=true]:border-red-400" aria-describedby="adresse-err" />
+                <p id="adresse-err" class="mt-1.5 hidden text-sm text-red-300" role="alert"></p>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="glow group mt-7 flex w-full items-center justify-center gap-2.5 rounded-2xl bg-fuchsia px-6 py-4 text-base font-bold text-white transition hover:bg-fuchsia-hover active:scale-[.99] disabled:opacity-70" data-submit>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+            <span data-submit-label>Envoyer ma demande</span>
+          </button>
+          <p id="form-aide" class="mt-4 text-center text-xs leading-relaxed text-zinc-500">WhatsApp s'ouvre avec votre message pré-rempli. Rien n'est envoyé tant que vous ne validez pas dans WhatsApp.</p>
+          <p class="sr-only" role="status" aria-live="polite" data-status></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ AVIS CLIENTS ============ -->
+    <section id="avis" class="relative scroll-mt-24 overflow-hidden py-24 sm:py-32" aria-labelledby="avis-titre">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div>
+            <p class="reveal text-sm font-bold uppercase tracking-[0.25em] text-fuchsia-soft">Avis clients</p>
+            <h2 id="avis-titre" class="reveal mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl" style="--d:80ms">Un travail soigné, <span class="font-serif italic font-semibold">un accueil qui compte.</span></h2>
+          </div>
+          <div class="reveal glass flex items-center gap-5 rounded-3xl px-6 py-5" style="--d:160ms">
+            <span class="text-5xl font-extrabold text-white">4,6</span>
+            <div>
+              <div class="flex gap-0.5 text-fuchsia-soft" role="img" aria-label="Note de 4,6 sur 5">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="half"><stop offset="60%" stop-color="currentColor"/><stop offset="60%" stop-color="#3a3d45"/></linearGradient></defs><path fill="url(#half)" d="M12 2l3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9z"/></svg>
+              </div>
+              <p class="mt-1 text-sm text-zinc-400">32 avis sur Google</p>
+            </div>
+          </div>
+        </div>
+
+        <!--
+          ⚠️ AVIS D'EXEMPLE : les textes ci-dessous sont illustratifs.
+          Remplacez-les par de vrais avis Google (prénom + extrait, avec accord) avant la mise en ligne publique.
+        -->
+        <div class="reveal relative mt-14" style="--d:120ms" role="region" aria-roledescription="carrousel" aria-label="Avis clients">
+          <div class="no-scrollbar flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2" data-track tabindex="0" aria-label="Liste des avis, faites défiler horizontalement">
+            <figure class="glass flex w-[86%] shrink-0 snap-start flex-col rounded-3xl p-7 sm:w-[48%] lg:w-[calc((100%-2.5rem)/3)]" aria-roledescription="avis">
+              <div class="flex gap-0.5 text-fuchsia-soft" role="img" aria-label="5 sur 5">★★★★★</div>
+              <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-zinc-200">« Costume rendu comme neuf, le pli du pantalon est parfait. On sent le savoir-faire. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-fuchsia/20 font-bold text-fuchsia-soft">K</span><span><strong class="block text-sm text-white">Karim</strong><span class="text-xs text-zinc-500">Avis d'exemple</span></span></figcaption>
+            </figure>
+            <figure class="glass flex w-[86%] shrink-0 snap-start flex-col rounded-3xl p-7 sm:w-[48%] lg:w-[calc((100%-2.5rem)/3)]" aria-roledescription="avis">
+              <div class="flex gap-0.5 text-fuchsia-soft" role="img" aria-label="5 sur 5">★★★★★</div>
+              <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-zinc-200">« Accueil chaleureux et de bons conseils pour ma robe en soie. Le résultat est impeccable. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-fuchsia/20 font-bold text-fuchsia-soft">M</span><span><strong class="block text-sm text-white">Myriam</strong><span class="text-xs text-zinc-500">Avis d'exemple</span></span></figcaption>
+            </figure>
+            <figure class="glass flex w-[86%] shrink-0 snap-start flex-col rounded-3xl p-7 sm:w-[48%] lg:w-[calc((100%-2.5rem)/3)]" aria-roledescription="avis">
+              <div class="flex gap-0.5 text-fuchsia-soft" role="img" aria-label="5 sur 5">★★★★★</div>
+              <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-zinc-200">« Ourlet fait rapidement et proprement. Pratique d'avoir un pressing ouvert jusqu'à 19h. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-fuchsia/20 font-bold text-fuchsia-soft">T</span><span><strong class="block text-sm text-white">Thomas</strong><span class="text-xs text-zinc-500">Avis d'exemple</span></span></figcaption>
+            </figure>
+            <figure class="glass flex w-[86%] shrink-0 snap-start flex-col rounded-3xl p-7 sm:w-[48%] lg:w-[calc((100%-2.5rem)/3)]" aria-roledescription="avis">
+              <div class="flex gap-0.5 text-fuchsia-soft" role="img" aria-label="4 sur 5">★★★★<span class="text-ink-600">★</span></div>
+              <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-zinc-200">« Ma couette est revenue gonflée et toute fraîche. Travail soigné, je reviendrai pour les rideaux. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-fuchsia/20 font-bold text-fuchsia-soft">A</span><span><strong class="block text-sm text-white">Aïcha</strong><span class="text-xs text-zinc-500">Avis d'exemple</span></span></figcaption>
+            </figure>
+            <figure class="glass flex w-[86%] shrink-0 snap-start flex-col rounded-3xl p-7 sm:w-[48%] lg:w-[calc((100%-2.5rem)/3)]" aria-roledescription="avis">
+              <div class="flex gap-0.5 text-fuchsia-soft" role="img" aria-label="5 sur 5">★★★★★</div>
+              <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-zinc-200">« Une tache que je pensais perdue sur ma veste en daim a disparu. Personnel très aimable. »</blockquote>
+              <figcaption class="mt-6 flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-full bg-fuchsia/20 font-bold text-fuchsia-soft">D</span><span><strong class="block text-sm text-white">David</strong><span class="text-xs text-zinc-500">Avis d'exemple</span></span></figcaption>
+            </figure>
+          </div>
+
+          <div class="mt-8 flex items-center justify-between gap-4">
+            <div class="flex gap-2" data-dots aria-hidden="true"></div>
+            <div class="flex gap-2">
+              <button type="button" class="glass grid h-12 w-12 place-items-center rounded-full text-white transition hover:bg-white/10 disabled:opacity-40" aria-label="Avis précédent" data-prev>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+              </button>
+              <button type="button" class="glass grid h-12 w-12 place-items-center rounded-full text-white transition hover:bg-white/10 disabled:opacity-40" aria-label="Avis suivant" data-next>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-8 text-sm text-zinc-400">
+          <a href="https://www.google.com/maps/search/?api=1&query=Eden+Pressing+79+Avenue+Paul+Val%C3%A9ry+95200+Sarcelles" target="_blank" rel="noopener" class="font-semibold text-white underline decoration-fuchsia-soft decoration-2 underline-offset-4 hover:text-fuchsia-soft">Lire les 32 avis sur Google</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="scroll-mt-24 pb-24 sm:pb-32" aria-labelledby="faq-titre">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <h2 id="faq-titre" class="reveal text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Questions fréquentes</h2>
+        <div class="mt-8 divide-y divide-white/10 border-y border-white/10">
+          <details class="reveal group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">Où se trouve Eden Pressing à Sarcelles ?<span class="text-fuchsia-soft transition group-open:rotate-45" aria-hidden="true">+</span></summary>
+            <p class="mt-3 leading-relaxed text-zinc-400">Au 79 avenue Paul Valéry, 95200 Sarcelles. La boutique est ouverte en continu jusqu'à 19h00.</p>
+          </details>
+          <details class="reveal group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">Quels vêtements et articles prenez-vous en charge ?<span class="text-fuchsia-soft transition group-open:rotate-45" aria-hidden="true">+</span></summary>
+            <p class="mt-3 leading-relaxed text-zinc-400">Costumes, robes (y compris de mariée), chemises, manteaux, pièces en cuir et en daim, ainsi que les grandes pièces : couettes, rideaux et tapis. Les retouches (ourlets, fermetures éclair) sont faites sur place.</p>
+          </details>
+          <details class="reveal group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">Comment demander un devis ou une collecte ?<span class="text-fuchsia-soft transition group-open:rotate-45" aria-hidden="true">+</span></summary>
+            <p class="mt-3 leading-relaxed text-zinc-400">Utilisez le <a href="#demande" class="text-white underline decoration-fuchsia-soft underline-offset-4">formulaire de demande</a> : il prépare un message WhatsApp avec votre article, votre besoin et votre choix entre dépôt en boutique et collecte.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER & CONTACT ============ -->
+  <footer id="contact" class="scroll-mt-24 border-t border-white/10 bg-ink-950" aria-labelledby="contact-titre">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.4fr] lg:px-8">
+      <div>
+        <h2 id="contact-titre" class="reveal text-3xl font-extrabold tracking-tight text-white sm:text-4xl">Venez nous voir</h2>
+        <address class="reveal mt-8 space-y-6 not-italic" style="--d:80ms">
+          <div class="flex gap-4">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-fuchsia/15 text-fuchsia-soft"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+            <div><p class="text-sm text-zinc-400">Adresse</p><p class="font-semibold text-white">79 Avenue Paul Valéry<br />95200 Sarcelles</p></div>
+          </div>
+          <div class="flex gap-4">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-fuchsia/15 text-fuchsia-soft"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><p class="text-sm text-zinc-400">Horaires</p><p class="font-semibold text-white">Ouvert en continu jusqu'à 19h00</p></div>
+          </div>
+          <div class="flex gap-4">
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-fuchsia/15 text-fuchsia-soft"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg></span>
+            <div><p class="text-sm text-zinc-400">WhatsApp</p><a href="https://wa.me/33766338472" target="_blank" rel="noopener" class="font-semibold text-white hover:text-fuchsia-soft">Nous écrire sur WhatsApp</a></div>
+          </div>
+        </address>
+        <div class="reveal mt-9 flex flex-wrap gap-3" style="--d:160ms">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=79+Avenue+Paul+Val%C3%A9ry+95200+Sarcelles" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-fuchsia px-6 py-3 font-bold text-white transition hover:bg-fuchsia-hover">Itinéraire</a>
+          <a href="#demande" class="glass inline-flex items-center rounded-full px-6 py-3 font-semibold text-white transition hover:bg-white/10">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="reveal fade overflow-hidden rounded-3xl border border-white/10 bg-ink-800" style="--d:120ms">
+        <iframe title="Plan d'accès à Eden Pressing, 79 avenue Paul Valéry à Sarcelles"
+                src="https://www.google.com/maps?q=79+Avenue+Paul+Val%C3%A9ry,+95200+Sarcelles&z=16&output=embed"
+                class="h-[340px] w-full grayscale invert-[.92] hue-rotate-180 contrast-[.9] lg:h-full lg:min-h-[420px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-zinc-500 sm:flex-row sm:px-6 lg:px-8">
+        <p>© <span data-year>2026</span> Eden Pressing · Sarcelles</p>
+        <nav aria-label="Liens de pied de page">
+          <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <li><a href="#services" class="hover:text-white">Services</a></li>
+            <li><a href="#demande" class="hover:text-white">Devis &amp; collecte</a></li>
+            <li><a href="#avis" class="hover:text-white">Avis</a></li>
+            <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CTA flottant mobile -->
+  <a href="#demande" style="bottom: calc(1rem + env(safe-area-inset-bottom))" class="glow fixed inset-x-4 z-40 flex translate-y-24 items-center justify-center gap-2 rounded-2xl bg-fuchsia py-4 font-bold text-white opacity-0 transition duration-500 sm:hidden" data-float-cta aria-hidden="true" tabindex="-1">Demander un devis</a>
+
+  <script>
+    (() => {
+      const WHATSAPP_NUMBER = '33766338472';
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- Header : fond au défilement ---------- */
+      const header = document.querySelector('[data-header]');
+      const floatCta = document.querySelector('[data-float-cta]');
+      const onScroll = () => {
+        const scrolled = window.scrollY > 24;
+        header.classList.toggle('bg-ink-900/80', scrolled);
+        header.classList.toggle('backdrop-blur-xl', scrolled);
+        header.classList.toggle('border-b', scrolled);
+        header.classList.toggle('border-white/10', scrolled);
+
+        const demande = document.getElementById('demande').getBoundingClientRect();
+        const showCta = window.scrollY > window.innerHeight * 0.8 && (demande.top > window.innerHeight || demande.bottom < 0);
+        floatCta.classList.toggle('opacity-0', !showCta);
+        floatCta.classList.toggle('translate-y-24', !showCta);
+        floatCta.setAttribute('aria-hidden', String(!showCta));
+        floatCta.tabIndex = showCta ? 0 : -1;
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ---------- Menu mobile ---------- */
+      const menuBtn = document.querySelector('[data-menu-btn]');
+      const menu = document.querySelector('[data-menu]');
+      const setMenu = (open) => {
+        menu.classList.toggle('hidden', !open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+        menuBtn.querySelector('[data-icon-open]').classList.toggle('hidden', open);
+        menuBtn.querySelector('[data-icon-close]').classList.toggle('hidden', !open);
+        if (open) header.classList.add('bg-ink-900/95', 'backdrop-blur-xl');
+        else header.classList.remove('bg-ink-900/95');
+      };
+      menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+      menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+      /* ---------- Navigation SPA : section active + hash ---------- */
+      const navLinks = [...document.querySelectorAll('[data-nav]')];
+      const sections = ['services', 'demande', 'avis', 'contact'].map((id) => document.getElementById(id));
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach((link) => {
+            const active = link.getAttribute('href') === '#' + entry.target.id;
+            link.classList.toggle('bg-white/10', active);
+            link.classList.toggle('text-white', active);
+            if (active) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach((s) => s && spy.observe(s));
+
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        const id = link.getAttribute('href').slice(1);
+        const target = id && document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        history.pushState(null, '', '#' + id);
+        if (id === 'demande') setTimeout(() => document.getElementById('nom').focus({ preventScroll: true }), reduceMotion ? 0 : 600);
+      });
+
+      /* ---------- Animations d'apparition ---------- */
+      const reveals = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        reveals.forEach((el) => el.classList.add('is-in'));
+      } else {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach((el) => io.observe(el));
+      }
+
+      /* ---------- Carrousel d'avis ---------- */
+      const track = document.querySelector('[data-track]');
+      const slides = [...track.children];
+      const prev = document.querySelector('[data-prev]');
+      const next = document.querySelector('[data-next]');
+      const dotsWrap = document.querySelector('[data-dots]');
+      const dots = slides.map(() => {
+        const d = document.createElement('span');
+        d.className = 'h-1.5 w-6 rounded-full bg-white/20 transition-[width,background-color] duration-300';
+        dotsWrap.appendChild(d);
+        return d;
+      });
+      const step = () => slides[0].getBoundingClientRect().width + 20;
+      const currentIndex = () => Math.round(track.scrollLeft / step());
+      const maxScroll = () => track.scrollWidth - track.clientWidth - 4;
+      const updateCarousel = () => {
+        const i = currentIndex();
+        dots.forEach((d, k) => {
+          d.style.backgroundColor = k === i ? '#ff4fa8' : '';
+          d.style.width = k === i ? '2.5rem' : '';
+        });
+        prev.disabled = track.scrollLeft <= 4;
+        next.disabled = track.scrollLeft >= maxScroll();
+      };
+      prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+      track.addEventListener('scroll', () => requestAnimationFrame(updateCarousel), { passive: true });
+      track.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); }
+      });
+      window.addEventListener('resize', updateCarousel);
+      updateCarousel();
+
+      // Défilement automatique, en pause au survol / focus / onglet masqué
+      let paused = false;
+      const region = track.closest('[role="region"]');
+      ['mouseenter', 'focusin', 'touchstart'].forEach((ev) => region.addEventListener(ev, () => (paused = true), { passive: true }));
+      ['mouseleave', 'focusout'].forEach((ev) => region.addEventListener(ev, () => (paused = false)));
+      if (!reduceMotion) {
+        setInterval(() => {
+          if (paused || document.hidden) return;
+          const r = track.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > window.innerHeight) return;
+          if (track.scrollLeft >= maxScroll()) track.scrollTo({ left: 0, behavior: 'smooth' });
+          else track.scrollBy({ left: step(), behavior: 'smooth' });
+        }, 5500);
+      }
+
+      /* ---------- Formulaire WhatsApp ---------- */
+      const form = document.getElementById('form-demande');
+      const details = form.elements.details;
+      const counter = form.querySelector('[data-count]');
+      const collecteBox = form.querySelector('[data-collecte]');
+      const adresse = form.elements.adresse;
+      const status = form.querySelector('[data-status]');
+
+      details.addEventListener('input', () => (counter.textContent = details.value.length));
+
+      const toggleCollecte = () => {
+        const isCollecte = form.elements.mode.value === 'Demande de collecte';
+        collecteBox.style.gridTemplateRows = isCollecte ? '1fr' : '0fr';
+        collecteBox.classList.toggle('opacity-0', !isCollecte);
+        collecteBox.setAttribute('aria-hidden', String(!isCollecte));
+        adresse.tabIndex = isCollecte ? 0 : -1;
+        adresse.required = isCollecte;
+        if (!isCollecte) clearError(adresse);
+      };
+      form.querySelectorAll('input[name="mode"]').forEach((r) => r.addEventListener('change', toggleCollecte));
+
+      function setError(field, msg) {
+        field.setAttribute('aria-invalid', 'true');
+        const err = document.getElementById(field.id + '-err');
+        err.textContent = msg;
+        err.classList.remove('hidden');
+      }
+      function clearError(field) {
+        field.removeAttribute('aria-invalid');
+        const err = document.getElementById(field.id + '-err');
+        if (err) { err.textContent = ''; err.classList.add('hidden'); }
+      }
+      [form.elements.nom, form.elements.article, adresse].forEach((f) =>
+        f.addEventListener(f.tagName === 'SELECT' ? 'change' : 'input', () => clearError(f))
+      );
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nom = form.elements.nom.value.trim();
+        const article = form.elements.article.value;
+        const demande = details.value.trim();
+        const mode = form.elements.mode.value;
+        const addr = adresse.value.trim();
+
+        [form.elements.nom, form.elements.article, adresse].forEach(clearError);
+        const invalid = [];
+        if (nom.length < 2) { setError(form.elements.nom, 'Indiquez votre nom.'); invalid.push(form.elements.nom); }
+        if (!article) { setError(form.elements.article, 'Choisissez un type d\'article.'); invalid.push(form.elements.article); }
+        if (mode === 'Demande de collecte' && addr.length < 5) { setError(adresse, 'Indiquez l\'adresse de collecte.'); invalid.push(adresse); }
+        if (invalid.length) { invalid[0].focus(); return; }
+
+        const lines = [
+          'Bonjour Eden Pressing,',
+          '',
+          '*Nouvelle demande depuis le site*',
+          '• Nom : ' + nom,
+          '• Article : ' + article,
+          '• Demande : ' + (demande || 'Aucune précision'),
+          '• Mode : ' + mode,
+        ];
+        if (mode === 'Demande de collecte') lines.push('• Adresse de collecte : ' + addr);
+        lines.push('', 'Merci !');
+
+        const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+
+        const btn = form.querySelector('[data-submit]');
+        const label = form.querySelector('[data-submit-label]');
+        btn.disabled = true;
+        label.textContent = 'Ouverture de WhatsApp…';
+        status.textContent = 'Votre message est prêt, WhatsApp va s\'ouvrir.';
+
+        // 'noopener' ferait renvoyer null à window.open : on coupe l'opener à la main.
+        const win = window.open(url, '_blank');
+        if (win) win.opener = null;
+        else window.location.href = url;
+
+        setTimeout(() => {
+          btn.disabled = false;
+          label.textContent = 'Envoyer ma demande';
+        }, 2500);
+      });
+
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
